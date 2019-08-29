@@ -32,12 +32,16 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="HtmlAgilityPack, Version=1.11.12.0, Culture=neutral, PublicKeyToken=bd319b19eaf3b43a, processorArchitecture=MSIL">
       <HintPath>..\packages\HtmlAgilityPack.1.11.12\lib\Net45\HtmlAgilityPack.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -46,13 +50,22 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Person.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\JayTek-OrionShiftManager\JayTek.OrionShiftManager\JayTek.OrionShiftManager.Core\JayTek.OrionShiftManager.Core.csproj">
+      <Project>{3C7D95B5-FB7E-4B41-9EEC-C61EEB189096}</Project>
+      <Name>JayTek.OrionShiftManager.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\JayTek-OrionShiftManager\JayTek.OrionShiftManager\JayTek.OrionShiftManager.FileServices\JayTek.OrionShiftManager.FileServices.csproj">
+      <Project>{4438B4AE-87F6-4835-8C05-0F46D396A63D}</Project>
+      <Name>JayTek.OrionShiftManager.FileServices</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
